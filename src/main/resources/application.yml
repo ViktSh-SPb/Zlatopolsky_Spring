@@ -1,0 +1,5 @@
+spring:
+  application: name=Zlatopolsky_Spring
+
+server:
+  port: 8081
