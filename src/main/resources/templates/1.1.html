@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>1.1</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+<h3>1.1 Вывести на одной строке числа 31, 18 и 79 с одним пробелом между ними. Текст '31 18 79' не использовать.</h3>
+<hr>
+<span th:each="number:${numbers}">[[ ${number}]]&nbsp;</span>
+</body>
+</html>
