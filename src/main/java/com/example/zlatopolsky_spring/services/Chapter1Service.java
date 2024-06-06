@@ -15,4 +15,12 @@ public class Chapter1Service {
         numbers.add(79);
         return numbers;
     }
+
+    public List<Integer> getLesson2Numbers() {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(47);
+        numbers.add(52);
+        numbers.add(150);
+        return numbers;
+    }
 }

@@ -20,4 +20,10 @@ public class Chapter1Controller {
         model.addAttribute("numbers", chapter1Service.getLesson1Numbers());
         return "1.1";
     }
+
+    @GetMapping("/lesson2")
+    public String getLesson2Page(Model model){
+        model.addAttribute("numbers", chapter1Service.getLesson2Numbers());
+        return "1.2";
+    }
 }
