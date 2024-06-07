@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org ">
+<head>
+  <meta charset="UTF-8">
+  <title>1.6</title>
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+<h3>1.6 Число <b>&#960;</b> примерно равно 3,1415926. Вывести на экран это число с тремя цифрами в дробной части. Текст '3.142' не использовать.</h3>
+<hr>
+<span th:text="${#numbers.formatDecimal(number, 0, 'COMMA', 3, 'POINT')}">10.00</span>
+<hr>
+<form action="/static">
+  <button>Назад</button>
+</form>
+</body>
+</html>
