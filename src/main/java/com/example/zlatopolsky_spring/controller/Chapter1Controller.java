@@ -4,7 +4,9 @@ import com.example.zlatopolsky_spring.services.Chapter1Service;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/chapter1")
@@ -49,5 +51,32 @@ public class Chapter1Controller {
     public String getLesson6Page(Model model){
         model.addAttribute("number", chapter1Service.getLesson6Number());
         return "chapter1/1.6";
+    }
+    @GetMapping("/lesson7")
+    public String getLesson7Page(Model model){
+        model.addAttribute("number", chapter1Service.getLesson7Number());
+        return "chapter1/1.7";
+    }
+
+    @GetMapping("/lesson8")
+    public String getLesson8Page(){
+        return "chapter1/1.8";
+    }
+
+    @PostMapping("/lesson8")
+    public String getLesson8ResultPage(Model model, @RequestParam("number") Integer number){
+        model.addAttribute("number", number);
+        return "chapter1/1.8_result";
+    }
+
+    @GetMapping("/lesson9")
+    public String getLesson9Page(){
+        return "chapter1/1.9";
+    }
+
+    @PostMapping("/lesson9")
+    public String getLesson9ResultPage(Model model, @RequestParam("number") Integer number){
+        model.addAttribute("number", number);
+        return "chapter1/1.9_result";
     }
 }

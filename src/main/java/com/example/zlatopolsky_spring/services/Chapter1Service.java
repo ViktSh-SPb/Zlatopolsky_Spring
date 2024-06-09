@@ -50,4 +50,9 @@ public class Chapter1Service {
         double number = Math.PI;
         return number;
     }
+
+    public Double getLesson7Number() {
+        double number = Math.E;
+        return number;
+    }
 }
