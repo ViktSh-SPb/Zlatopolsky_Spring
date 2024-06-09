@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>1.10</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+<h3>1.10 Составить программу, которая запрашивает имя человека и повторяет его на экране.</h3>
+<hr>
+<form th:method="POST" th:action="@{/chapter1/lesson10}">
+    <label for="name">Введите имя: </label>
+    <input type="text" id="name" name="name">
+    <input type="submit" value="Вывести">
+</form>
+<hr>
+<form action="/">
+    <button>Назад</button>
+</form>
+</body>
+</html>
