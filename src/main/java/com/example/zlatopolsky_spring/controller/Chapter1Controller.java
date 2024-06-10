@@ -112,4 +112,31 @@ public class Chapter1Controller {
         model.addAttribute("name", name);
         return "chapter1/1.12_result";
     }
+
+    @GetMapping("/lesson13")
+    public String getLesson13Page(){
+        return "chapter1/1.13";
+    }
+
+    @PostMapping("/lesson13")
+    public String getLesson13ResultPage(Model model, @RequestParam("number") Integer number){
+        model.addAttribute("number", number);
+        return "chapter1/1.13_result";
+    }
+
+    @GetMapping("/lesson14")
+    public String getLesson14Page(){
+        return "chapter1/1.14";
+    }
+
+    @PostMapping("/lesson14")
+    public String getLesson14ResultPage(Model model,
+                                        @RequestParam("number1") Integer number1,
+                                        @RequestParam("number2") Integer number2,
+                                        @RequestParam("number3") Integer number3){
+        model.addAttribute("number1", number1);
+        model.addAttribute("number2", number2);
+        model.addAttribute("number3", number3);
+        return "chapter1/1.14_result";
+    }
 }
