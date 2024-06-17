@@ -175,4 +175,22 @@ public class Chapter1Controller {
         model.addAttribute("y", y);
         return "chapter1/1.16_result";
     }
+
+    @GetMapping("/lesson17")
+    public String getLesson17Page(){
+        return "chapter1/1.17";
+    }
+
+    @PostMapping("/lesson17")
+    public String getLesson17ResultPage(Model model,
+                                        @RequestParam("a") Integer a,
+                                        @RequestParam("b") Integer b,
+                                        @RequestParam("x") Integer x,
+                                        @RequestParam("y") Integer y){
+        model.addAttribute("a", a);
+        model.addAttribute("b", b);
+        model.addAttribute("x", x);
+        model.addAttribute("y", y);
+        return "chapter1/1.17_result";
+    }
 }
