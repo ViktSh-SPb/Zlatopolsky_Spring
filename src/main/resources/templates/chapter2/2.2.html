@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>2.2</title>
+    <link rel="stylesheet" href="/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<h3>2.2 Составить программу вычисления значения функции \(\frac{a^2+10}{\sqrt{a^2+1}}\) при любом значении <b>a</b>.</h3>
+<hr>
+<form th:method="POST" th:action="@{/chapter2/lesson2}">
+    <span>Введите значение <b>a</b>: </span>&emsp;
+    <label for="a"><b>a</b>:</label>
+    <input type="text" id="a" name="a" size="10">&emsp;
+    <input type="submit" value="Вывести">
+</form>
+<hr>
+<form action="/">
+    <button>Назад</button>
+</form>
+</body>
+</html>

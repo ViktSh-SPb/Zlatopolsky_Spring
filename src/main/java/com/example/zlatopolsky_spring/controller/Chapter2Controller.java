@@ -19,12 +19,12 @@ public class Chapter2Controller {
 
 
     @GetMapping("/lesson1")
-    public String getLesson17Page(){
+    public String getLesson1Page(){
         return "chapter2/2.1";
     }
 
     @PostMapping("/lesson1")
-    public String getLesson17ResultPage(Model model,
+    public String getLesson1ResultPage(Model model,
                                         @RequestParam("a") Integer a,
                                         @RequestParam("x") Integer x){
         model.addAttribute("a", a);
@@ -32,5 +32,17 @@ public class Chapter2Controller {
         model.addAttribute("ya", chapter2Service.getLesson1aResult(x));
         model.addAttribute("yb", chapter2Service.getLesson1bResult(a));
         return "chapter2/2.1_result";
+    }
+
+    @GetMapping("/lesson2")
+    public String getLesson17Page(){
+        return "chapter2/2.2";
+    }
+
+    @PostMapping("/lesson2")
+    public String getLesson17ResultPage(Model model, @RequestParam("a") Integer a){
+        model.addAttribute("a", a);
+        model.addAttribute("result", chapter2Service.getLesson2Result(a));
+        return "chapter2/2.2_result";
     }
 }
