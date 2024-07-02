@@ -1,10 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org ">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <title>2.4</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script type="application/javascript">
+        function draw() {
+            const canvas = document.getElementById("canvas");
+            if (canvas.getContext) {
+                const ctx = canvas.getContext("2d");
+                ctx.fillStyle = "LightGreen";
 
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.arc(75, 75, 70, 0, Math.PI * 2, true);
+                ctx.fill();
+                ctx.strokeStyle ="rgb(0,0,0)";
+                ctx.moveTo(5,75);
+                ctx.lineTo(145, 75);
+                ctx.moveTo(145, 65);
+                ctx.lineTo(145, 85);
+                ctx.moveTo(75, 65);
+                ctx.lineTo(75, 75);
+                ctx.moveTo(5, 75);
+                ctx.lineTo(5, 85);
+                ctx.stroke();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.strokeStyle ="rgb(255,0,0)";
+                ctx.moveTo(5, 80);
+                ctx.lineTo(145, 80);
+                ctx.moveTo(75, 70);
+                ctx.lineTo(145, 70);
+
+                ctx.moveTo(83, 65);
+                ctx.lineTo(75, 70);
+                ctx.lineTo(83, 75);
+                ctx.moveTo(137, 65);
+                ctx.lineTo(145, 70);
+                ctx.lineTo(137, 75);
+
+                ctx.moveTo(13, 75);
+                ctx.lineTo(5, 80);
+                ctx.lineTo(13, 85);
+                ctx.moveTo(137, 75);
+                ctx.lineTo(145, 80);
+                ctx.lineTo(137, 85);
+                ctx.moveTo(145, 80);
+                ctx.closePath();
+                ctx.fillStyle="Red";
+                ctx.font = "20px serif";
+                ctx.textAlign = "center";
+                ctx.textBaseline = "middle";
+                ctx.fillText([[${radius}]], 110, 60);
+                ctx.fillText([[${diameter}]], 75, 90);
+                ctx.stroke();
+            }
+        }
+    </script>
+</head>
+<body onload="draw();">
+<h3>2.4 Дан радиус окружности. Найти ее диаметр.</h3>
+<hr>
+<div>[[${'Радиус: '+radius}]]</div>
+<hr>
+<canvas id="canvas"></canvas>
+<p>
+    Диаметр равен: [[${diameter}]]
+</p>
+<hr>
+
+<form action="/">
+    <button>Назад</button>
+</form>
 </body>
 </html>

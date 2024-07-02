@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org ">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>2.5</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-
+<h3>2.5 Дан радиус окружности. Найти ее диаметр.</h3>
+<hr>
+<form th:method="POST" th:action="@{/chapter2/lesson5}">
+    <label for="radius"><b>Введите радиус окружности</b>:</label>
+    <input type="text" id="radius" name="radius" size="10">&emsp;
+    <input type="submit" value="Вывести">
+</form>
+<hr>
+<form action="/">
+    <button>Назад</button>
+</form>
 </body>
 </html>
