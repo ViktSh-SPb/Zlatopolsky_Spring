@@ -97,4 +97,17 @@ public class Chapter2Controller {
         model.addAttribute("l", chapter2Service.getLesson6Result(h));
         return "chapter2/2.6_result";
     }
+
+    @GetMapping("/lesson7")
+    public String getLesson7Page(){
+        return "chapter2/2.7";
+    }
+
+    @PostMapping("/lesson7")
+    public String getLesson7ResultPage(Model model, @RequestParam("x") Integer x){
+        model.addAttribute("x", x);
+        model.addAttribute("v", chapter2Service.getLesson7volume(x));
+        model.addAttribute("s", chapter2Service.getLesson7square(x));
+        return "chapter2/2.7_result";
+    }
 }

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>2.7</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<h3>2.7 Дана длина ребра куба. Найти объем куба и площадь его боковой поверхности.</h3>
+<hr>
+<form th:method="POST" th:action="@{/chapter2/lesson7}">
+    <label for="x"><b>Введите длину ребра куба</b>:</label>
+    <input type="text" id="x" name="x" size="10">&emsp;
+    <input type="submit" value="Вывести">
+</form>
+<hr>
+<form action="/">
+    <button>Назад</button>
+</form>
+</body>
+</html>

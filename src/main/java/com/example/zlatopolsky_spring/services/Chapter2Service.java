@@ -29,4 +29,12 @@ public class Chapter2Service {
         final Integer R = 6350000;
         return (int)Math.round(Math.sqrt(2*R*h));
     }
+
+    public Integer getLesson7volume(Integer x){
+        return (int)Math.pow(x, 3);
+    }
+
+    public Integer getLesson7square(Integer x){
+        return (int)Math.pow(x,2);
+    }
 }
