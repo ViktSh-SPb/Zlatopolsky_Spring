@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>2.6</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<h3>2.6 Считая, что Земля - идеальная сфера с радиусом R = 6350 км, определить расстояние до линии горизонта от точки с заданной высотой над Землей.</h3>
+<hr>
+<form th:method="POST" th:action="@{/chapter2/lesson6}">
+    <label for="h"><b>Введите высоту над землей в метрах</b>:</label>
+    <input type="text" id="h" name="h" size="10">&emsp;
+    <input type="submit" value="Вывести">
+</form>
+<hr>
+<form action="/">
+    <button>Назад</button>
+</form>
+</body>
+</html>

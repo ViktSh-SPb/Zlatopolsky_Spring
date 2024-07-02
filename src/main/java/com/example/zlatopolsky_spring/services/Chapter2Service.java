@@ -24,4 +24,9 @@ public class Chapter2Service {
     public double getLesson3xResult(Integer x){
         return Math.sin((3.2+Math.sqrt(1+x))/Math.abs(5*x));
     }
+
+    public Integer getLesson6Result(Integer h){
+        final Integer R = 6350000;
+        return (int)Math.round(Math.sqrt(2*R*h));
+    }
 }

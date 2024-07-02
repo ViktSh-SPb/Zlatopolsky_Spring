@@ -85,4 +85,16 @@ public class Chapter2Controller {
         model.addAttribute("diameter", 2*radius);
         return "chapter2/2.5_result";
     }
+
+    @GetMapping("/lesson6")
+    public String getLesson6Page(){
+        return "chapter2/2.6";
+    }
+
+    @PostMapping("/lesson6")
+    public String getLesson6ResultPage(Model model, @RequestParam("h") Integer h){
+        model.addAttribute("h", h);
+        model.addAttribute("l", chapter2Service.getLesson6Result(h));
+        return "chapter2/2.6_result";
+    }
 }
