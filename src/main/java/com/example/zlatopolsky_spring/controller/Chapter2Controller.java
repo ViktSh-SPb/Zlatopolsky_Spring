@@ -45,4 +45,32 @@ public class Chapter2Controller {
         model.addAttribute("result", chapter2Service.getLesson2Result(a));
         return "chapter2/2.2_result";
     }
+
+    @GetMapping("/lesson3")
+    public String getLesson3Page(){
+        return "chapter2/2.3";
+    }
+
+    @PostMapping("/lesson3")
+    public String getLesson3ResultPage(Model model,
+                                       @RequestParam("a") Integer a,
+                                       @RequestParam("x") Integer x){
+        model.addAttribute("a", a);
+        model.addAttribute("x", x);
+        model.addAttribute("result_a", chapter2Service.getLesson3aResult(a));
+        model.addAttribute("result_x", chapter2Service.getLesson3xResult(x));
+        return "chapter2/2.3_result";
+    }
+
+    @GetMapping("/lesson4")
+    public String getLesson4Page(){
+        return "chapter2/2.4";
+    }
+
+    @PostMapping("/lesson4")
+    public String getLesson4ResultPage(Model model, @RequestParam("x") Integer x){
+        model.addAttribute("x", x);
+        model.addAttribute("perimeter", 4*x);
+        return "chapter2/2.4_result";
+    }
 }

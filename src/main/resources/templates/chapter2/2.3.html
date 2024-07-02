@@ -5,17 +5,25 @@
       xsi:schemaLocation="http://thymeleaf.org ">
 <head>
     <meta charset="UTF-8">
-    <title>2.2</title>
+    <title>2.3</title>
     <link rel="stylesheet" href="/css/main.css">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-<h3>2.2 Составить программу вычисления значения функции \(\frac{a^2+10}{\sqrt{a^2+1}}\) при любом значении <b>a</b>.</h3>
+<h3>2.3 Составить программу:</h3>
+<p>
+    а) вычисления значения функции \(\sqrt\frac{2a+sin|3a|}{3,56}\) при любом значении <b>a</b>;
+</p>
+<p>
+    б) вычисления значения функции \(sin\frac{3,2+\sqrt{1+x}}{|5x|}\) при любом значении <b>x</b>.
+</p>
 <hr>
-<form th:method="POST" th:action="@{/chapter2/lesson2}">
-    <span>Введите значение <b>a</b>: </span>&emsp;
+<form th:method="POST" th:action="@{/chapter2/lesson3}">
+    <span>Введите значения переменных: </span>&emsp;
     <label for="a"><b>a</b>:</label>
     <input type="text" id="a" name="a" size="10">&emsp;
+    <label for="x"><b>x</b>:</label>
+    <input type="text" id="x" name="x" size="10">&emsp;
     <input type="submit" value="Вывести">
 </form>
 <hr>

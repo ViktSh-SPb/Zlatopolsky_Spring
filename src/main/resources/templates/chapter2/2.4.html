@@ -5,20 +5,19 @@
       xsi:schemaLocation="http://thymeleaf.org ">
 <head>
     <meta charset="UTF-8">
-    <title>2.2</title>
+    <title>2.4</title>
     <link rel="stylesheet" href="/css/main.css">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-<h3>2.2 Составить программу вычисления значения функции \(\frac{a^2+10}{\sqrt{a^2+1}}\) при любом значении <b>a</b>.</h3>
+<h3>2.4 Дана сторона квадрата. Найти его периметр.</h3>
 <hr>
-<div>[[${'a: '+a}]]</div>
+<form th:method="POST" th:action="@{/chapter2/lesson4}">
+    <label for="x"><b>Введите длину стороны</b>:</label>
+    <input type="text" id="x" name="x" size="10">&emsp;
+    <input type="submit" value="Вывести">
+</form>
 <hr>
-<div class="formula">
-    $$ \frac{[[${a}]]^2+10}{\sqrt{[[${a}]]^2+1}} = [[${result}]] $$
-</div>
-<hr>
-
 <form action="/">
     <button>Назад</button>
 </form>

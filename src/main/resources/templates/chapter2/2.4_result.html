@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>2.4</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script type="application/javascript">
+        function draw() {
+            const canvas = document.getElementById("canvas");
+            if (canvas.getContext) {
+                const ctx = canvas.getContext("2d");
+                ctx.fillStyle = "LightGreen";
+                ctx.strokeStyle ="rgb(0,0,0)";
+                ctx.fillRect(20, 20, 100, 100);
+                ctx.strokeRect(20, 20, 100, 100);
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(120, 20);
+                ctx.lineTo(140, 20);
+                ctx.moveTo(120, 120);
+                ctx.lineTo(140, 120);
+                ctx.moveTo(124,29);
+                ctx.lineTo(130, 20);
+                ctx.lineTo(136, 29);
+                ctx.moveTo(130,20);
+                ctx.lineTo(130, 120);
+                ctx.lineTo(124, 111);
+                ctx.moveTo(130,120);
+                ctx.lineTo(136, 111);
+                ctx.closePath();
+                ctx.fillStyle="Black";
+                ctx.font = "20px serif";
+                ctx.textAlign = "center";
+                ctx.textBaseline = "middle";
+                ctx.fillText([[${x}]], 140, 70);
+                ctx.fillText([[${perimeter}]], 70, 70);
+                ctx.stroke();
+            }
+        }
+    </script>
+</head>
+<body onload="draw();">
+<h3>2.4 Дана сторона квадрата. Найти его периметр.</h3>
+<hr>
+<div>[[${'длина стороны: '+x}]]</div>
+<hr>
+<canvas id="canvas"></canvas>
+<p>
+    Периметр равен: [[${perimeter}]]
+</p>
+<hr>
+
+<form action="/">
+    <button>Назад</button>
+</form>
+</body>
+</html>
